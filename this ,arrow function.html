@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>document</title>
+
+</head>
+
+<body>
+   <button id="버튼">버튼이에요</button>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+   </script>
+
+<script>
+   // 1. 내가 작성한 답
+   // var 사람 = {
+   //    name : '손흥민',
+   //    sayHi : function(){
+   //       console.log(`안녕 나는 ${사람.name}`);
+   //    }
+   // }
+
+   // 사람.sayHi();
+
+   //답
+   // var 사람 = {
+   //    name : '손흥민',
+   //    sayHi : function(){
+   //       console.log(`안녕 나는 ${this.name}`);
+   //    }
+   // }
+
+   // 사람.sayHi();
+
+
+
+   // 2. 내가 작성한 답
+   // var 자료 = {
+   //    data : [1, 2, 3, 4, 5],
+   //    data_sum : function(){
+   //       var sum = 0;
+   //       자료.data.forEach(function(i){
+   //          sum += i;
+   //       });
+   //       console.log(sum);
+   //    }
+   // }
+
+   // 자료.data_sum();
+
+   //답
+   // var 자료 = {
+   //    data : [1, 2, 3, 4, 5],
+   // }
+
+   // 자료.data_sum = function(){
+   //    var sum = 0;
+
+   //    this.data.forEach(function(i){
+   //       sum += i;
+   //    })
+   //    console.log(sum);
+   // }
+
+   // 자료.data_sum();
+
+
+
+   //3. 내가 작성한 답
+   // $('#버튼').click(function(){
+   //    setTimeout(function(){
+   //       console.log($('#버튼').html());
+   //    }, 1000)
+   // })
+   
+   //답
+   // $('#버튼').click(function () {
+   //    setTimeout(() =>{
+   //       console.log(this.innerHTML)
+   //    }, 1000)
+   // });
+</script>
+
+</html>
