@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+      /*
+      var a = [1, 2, 3];
+      var b = [4, 5];
+      var c = [...a, ...b];
+
+      console.log(a);
+      console.log(b);
+      console.log(c);
+      */
+
+      /*
+      function 더하기(a, b, c){
+         console.log(a + b + c);
+      }
+      
+      var arr = [10, 20, 30];
+
+      더하기(arr[0], arr[1], arr[2]); //주먹구구식
+      더하기.apply(undefined, arr); //옛날 방식
+      더하기(...arr); //요즘 방식
+      */
+
+      //apply 개념설명을 위한 예제
+      /*
+      var person = {
+         인사 : function(){
+            console.log('안녕');
+         }
+      }
+
+      var person2 = {
+         name : '손흥민'
+      }
+
+      person.인사.apply(person2);
+      */
+      /*
+      apply와 call은 실행 결과도 똑같고 사용법도 똑같습니다. 
+      하지만 차이점이 하나 있는데, 내가 person.인사()에 파라미터를 넣어서 실행하고 싶은 경우에는 
+
+      person.인사.apply(person2, 파라미터);
+      person.인사.call(person2, 파라미터);
+
+      이렇게 실행하셔야하는데
+      이 때 apply는 파라미터를 [array]로 한꺼번에 집어넣을 수 있고
+      call은 그냥 1,2,3 이렇게 일반 함수처럼 만 집어넣을 수 있습니다. 
+      */
+   </script>
+</body>
+</html>
