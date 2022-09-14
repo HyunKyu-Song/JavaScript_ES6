@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      //reference data type 복사하는 법  -  object 복사 기계사용
+
+      //파라미터는 변수생성 & 할당과 같음
+      //ex)
+      var 이름1 = { name: 'kim' };
+
+      function 변경(obj) {
+         obj = { name: 'park' };
+      }
+
+      변경(이름1)
+
+      //변경안됨.즉, 이름1에는 park이 아닌 원래 값 kim이 들어있음
+      //왜냐면, 아래 코드와 같은 말이기 때문
+
+      var 이름1 = { name: 'kim' };
+
+      function 변경(obj) {
+         var obj = { name: 'park' };
+      }
+
+      변경(이름1)
+
+   </script>
+</body>
+
+</html>
