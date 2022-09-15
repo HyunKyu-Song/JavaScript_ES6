@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      /*
+      function 기계(inp1, inp2) {
+         this.name = inp1;
+         this.age = inp2;
+         this.sayHi = function () {
+            console.log(`안녕하세요. ${this.name} 입니다.\n나이는 ${this.age} 입니다.`);
+         }
+      }
+
+      기계.prototype.gender = '남';
+
+      var 학생1 = new 기계('park', 25);
+      var 학생2 = new 기계('kim', 11);
+      console.log(학생1.gender);
+      console.log(학생2.gender);
+      */
+
+      var 부모 = { name: 'kim' };
+      var 자식 = {};
+
+      자식.__proto__ = 부모;
+
+      console.log(부모.name)
+      console.log(자식.name) //출력 가능해짐
+   </script>
+</body>
+
+</html>

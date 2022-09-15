@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      /*
+      function 기계(inp1, inp2){
+         this.name = inp1;
+         this.age = inp2;
+         this.sayHi = function(){
+            console.log(`안녕하세요. ${this.name} 입니다.\n나이는 ${this.age} 입니다.`);
+         }
+      }
+      var 학생1 = new 기계('kim', 25);
+      var 학생2 = new 기계('park', 18);
+
+      학생1.sayHi()
+      학생2.sayHi()
+      console.log(학생1)
+      console.log(학생2)
+      */
+
+
+
+      
+      function data(inp1, inp2){
+         this.name = inp1;
+         this.price = inp2;
+         this.tax = function(){
+            console.log(this.price * 0.1);
+         }
+      }
+      var product1 = new data('shirts', 50000);
+      var product2 = new data('pants', 60000);
+
+      console.log(product1);
+      console.log(product2);
+      product1.tax()
+
+   </script>
+</body>
+
+</html>
