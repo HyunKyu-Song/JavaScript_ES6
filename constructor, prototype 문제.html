@@ -53,16 +53,23 @@
 
       //문제 3
       /*
-      */
-      function remove3(){
+      Array.prototype.remove3 = function () {
+         for (var i = 0; i < this.length; i++) {
+            if (this[i] === 3) {
+               this.splice(i, 1);
+            }
+         }
+      };
 
-      }
-      arr.__proto__.remove3
-      arr = new remove3();
-      var arr = [1, 2, 3];
+      var arr = [1, 2, 3, 4];
       arr.remove3();
 
-      console.log(arr); //[1,2]
+      console.log(arr); //[1,2,4]
+      */
+
+
+
+
    </script>
 </body>
 
