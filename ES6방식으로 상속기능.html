@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+      class 부모 {
+         constructor(){
+            this.name = 'kim';
+            this.sayhi = function(){
+               console.log(`나는 ${this.name} 이다.`);
+            }
+         }
+         //constructor 밖에 쓰면 부모.prototype에 추가됨
+         saybye(){
+            console.log('bye~');
+         }
+      }
+      var 자식 = new 부모();
+      //자식.__proto__; == Object.getPrototypeOf(자식);
+      //부모의 prototype을 출력함
+   </script>
+</body>
+</html>

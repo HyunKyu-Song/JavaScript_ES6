@@ -18,13 +18,15 @@
 
       function 변경(obj) {
          obj = { name: 'park' };
+         console.log(obj.name)
       }
 
       변경(이름1)
+      console.log(`이름1 : ${이름1.name}`)
 
       //변경안됨.즉, 이름1에는 park이 아닌 원래 값 kim이 들어있음
       //왜냐면, 아래 코드와 같은 말이기 때문
-
+      /*
       var 이름1 = { name: 'kim' };
 
       function 변경(obj) {
@@ -32,6 +34,7 @@
       }
 
       변경(이름1)
+      */
 
    </script>
 </body>
