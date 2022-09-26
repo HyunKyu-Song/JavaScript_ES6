@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <button class="btn">버튼</button>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+   <script>
+      /*
+      async function 더하기() {
+         var 프로미스 = new Promise(function(resolve, reject){
+            var 힘든연산 = 1 + 1;
+            //resolve(힘든연산); // 2 출력
+            reject(힘든연산); // 프로미스 연산이 실패했음 출력
+         })
+
+         try{
+            var 결과 = await 프로미스;
+            console.log(결과);
+         } catch{
+            console.log('프로미스 연산이 실패했음');
+         }
+      }
+
+      더하기();
+      */
+      
+      /*
+      더하기().then(function (result) {
+         console.log(result);
+      })
+      */
+      
+      async function 버튼(){
+         var 프로미스 = new Promise(function(resolve, reject){
+            $('.btn').click(function(){
+               //resolve('성공함');
+               Promise.reject('실패함');
+            });
+         })
+
+         try{
+            var result = await 프로미스;
+            console.log(result);
+         } catch{
+            console.log(result);
+         }
+      }
+
+      버튼();
+
+   </script>
+</body>
+
+</html>
