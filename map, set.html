@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+      // Map 자료형
+      var person = new Map();
+      person.set('name', 'Song');
+      person.set('age', 25);
+      person.set(20, 'adult'); //키값으로 숫자도 가능
+
+
+      var person2 = new Map([
+         ['name', 'Kim'],
+         ['age', 10]
+      ]);
+
+
+      // Set 자료형
+      var 출석부 = ['Kim', 'Song', 'Park', 'Song'];
+      var 출석부2 = new Set(['Kim', 'Song', 'Park', 'Song']);
+      var 출석부3 = new Set(출석부);
+      //출석부 = [...출석부2];
+
+
+      출석부2.forEach(function(i, j){
+         console.log(i)
+      })
+
+
+
+   </script>
+</body>
+</html>

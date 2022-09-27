@@ -55,6 +55,8 @@
       }
       */
 
+
+      /*
       var products = [
          {
             name1: 'chair',
@@ -70,30 +72,21 @@
          },
       ];
 
+      let newValue;
+      let newKey;
 
-
-
-      products.forEach(function(i, j){
-         for(num in i){
-            console.log(num)
+      for(i of products){
+         for(j in i){
+            if(!(isNaN(parseInt(j.slice(-1))))){
+               newKey = j.slice(0, -1);
+               newValue = i[j];
+               i[newKey] = newValue;
+               delete i[j];
+            }
          }
-      })
-
-
-
-      
-      /*
-      */
-
-      
-      /*
-      for(num in products){
-         console.log(products[num])
       }
       */
 
-      
-      
    </script>
 </body>
 

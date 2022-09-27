@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <custom-input name="아이디"></custom-input><br>
+   <custom-input name="비번"></custom-input>
+
+   <script>
+      class 클래스 extends HTMLElement{
+         connectedCallback(){
+            let name = this.getAttribute('name');
+            this.innerHTML = `<label>${name}을 입력하시오 </label><input>`
+         }
+         static get observedAttributes(){
+            return ['name']   // name 이라는 attribute가 바뀌는지 감시
+         }
+         attributeChangedCallback(){ // 바뀌면 이거 실행
+            console.log(this.getAttribute('name'));
+            let name = this.getAttribute('name');
+            this.innerHTML = `<label>${name}을 입력하시오 </label><input>`
+         }
+      }
+
+      customElements.define('custom-input', 클래스);
+   </script>
+</body>
+</html>

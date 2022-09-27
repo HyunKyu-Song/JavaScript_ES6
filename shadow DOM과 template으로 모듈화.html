@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <div id="dark"></div>
+   <custom-input name="아이디"></custom-input>
+   <label for="">apple</label>
+   <template>
+      <div>
+         <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos fugiat, temporibus explicabo quaerat, cumque aliquam nobis saepe natus quasi tempore voluptatum quas doloremque! Nobis aliquam obcaecati dignissimos ad! Nesciunt, reprehenderit?
+         </p>
+      </div>
+   </template>
+
+
+   <script>
+      document.querySelector('#dark').attachShadow({mode : 'open'});
+      document.querySelector('#dark').shadowRoot.innerHTML = 
+      '<p>어둠에서 왔음</p>'
+
+
+
+
+      class 클래스 extends HTMLElement{
+         connectedCallback(){
+            let name = this.getAttribute('name');
+            //this.innerHTML = `<label>${name}을 입력하시오 </label><input>`
+            
+            this.attachShadow({mode : 'open'});
+            this.shadowRoot.innerHTML = 
+            `
+            <style>label{color : red}</style>
+            <label>${name}을 입력하시오 </label><input>
+            `
+         }
+      }
+
+      customElements.define('custom-input', 클래스);
+   </script>
+</body>
+</html>
